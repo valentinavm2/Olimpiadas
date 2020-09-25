@@ -2,6 +2,10 @@ package olimpiadas;
 
 import java.util.Date;
 
+
+//Este es un comentario
+
+
 public class Olimpiadas {
 
     private String juego; //tipo de juego
@@ -31,12 +35,13 @@ public class Olimpiadas {
     
     //el metodo permite cambia el juego
     //y cambiar la habilidad
+    //ademas la convierte en internacional
     public void modificacion(
             String nuevoJuego,
             String nuevaHabilidad){
        this.juego = nuevoJuego;
        this.habilidad = nuevaHabilidad;
-       this.internacional = false;
+       this.internacional = true;
     }
 
     public String getJuego() {
@@ -81,6 +86,27 @@ public class Olimpiadas {
     
     
     public static void main(String[] args) {
+        Olimpiadas olimpiadasUno = new Olimpiadas(
+                "Natacion",
+                10,
+                new Date(),"Locomocion",
+                false);
+        Olimpiadas olimpiadasDos = new Olimpiadas(
+                "Baloncesto",
+                20,
+                new Date(),"coordinacion",
+                true);
+        
+        System.out.println(olimpiadasUno.getJuego());
+        System.out.println(olimpiadasUno.getNumeroDeJugadores());
+        System.out.println(olimpiadasUno.getInternacional());
+        
+        
+        olimpiadasUno.aumentarJugadores();
+        
+        System.out.println(olimpiadasUno.getJuego());
+        System.out.println(olimpiadasUno.getNumeroDeJugadores());
+        System.out.println(olimpiadasUno.getInternacional());
         
     }
     
