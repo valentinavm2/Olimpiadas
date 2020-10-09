@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class Olimpiadas {
 
-    private String juego; //tipo de juego
+    String juego; //tipo de juego
     private int numeroDeJugadores; //cantidad de participantes de ese juego
     private Date fechaDelJuego; //fecha en que se realizara el juego
     private String habilidad; // habilidad destacada en el juego
