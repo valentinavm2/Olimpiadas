@@ -13,7 +13,11 @@ public class Olimpiadas {
     private Date fechaDelJuego; //fecha en que se realizara el juego
     private String habilidad; // habilidad destacada en el juego
     private Boolean internacional; //true si son participantes de distintos paises o false si son de un solo pais
-
+    
+    //atributos de composicion
+    private Persona jugador = null;
+    private Premio premioFinal;
+    
     public Olimpiadas(
             String juego, 
             int numeroDeJugadores, 
@@ -25,6 +29,15 @@ public class Olimpiadas {
         this.fechaDelJuego = fechaDelJuego;
         this.habilidad = habilidad;
         this.internacional = internacional;
+        this.premioFinal = new Premio(586,"medalla");
+    }
+    
+    public Persona getJugador(){
+        return this.jugador;
+     }
+    
+    public void setJugador(Persona n){
+        this.jugador = n;
     }
     //el metodo aumenta la cantidad de jugadores de las ollimpiadas 30
     //y la convierte en internacional
