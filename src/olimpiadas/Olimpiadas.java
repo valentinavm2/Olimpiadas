@@ -31,10 +31,11 @@ public class Olimpiadas {
         this.internacional = internacional;
         this.premioFinal = new Premio(586,"medalla");
     }
-    
+    //hola 
     public Persona getJugador(){
         return this.jugador;
-     }
+     }//hola
+    //hola
     
     public void setJugador(Persona n){
         this.jugador = n;
