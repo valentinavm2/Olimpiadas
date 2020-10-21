@@ -31,11 +31,13 @@ public class Olimpiadas {
         this.internacional = internacional;
         this.premioFinal = new Premio(586,"medalla");
     }
-    //hola 
+    public Premio getPremioFinal(){
+        return this.premioFinal;
+    }
     public Persona getJugador(){
         return this.jugador;
-     }//hola
-    //hola
+     }
+    
     
     public void setJugador(Persona n){
         this.jugador = n;
@@ -100,28 +102,20 @@ public class Olimpiadas {
     
     
     public static void main(String[] args) {
-        Olimpiadas olimpiadasUno = new Olimpiadas(
+        Olimpiadas miOlimpiadas = new Olimpiadas(
                 "Natacion",
                 10,
                 new Date(),"Locomocion",
                 false);
-        Olimpiadas olimpiadasDos = new Olimpiadas(
-                "Baloncesto",
-                20,
-                new Date(),"coordinacion",
-                true);
         
-        System.out.println(olimpiadasUno.getJuego());
-        System.out.println(olimpiadasUno.getNumeroDeJugadores());
-        System.out.println(olimpiadasUno.getInternacional());
+        Niño Valiente = new Niño("German","Bolaños","masculino",12,false);
         
+        miOlimpiadas.setJugador(Valiente);
         
-        olimpiadasUno.aumentarJugadores();
+        System.out.println(miOlimpiadas.getJugador().getNombre());
+        System.out.println(miOlimpiadas.getPremioFinal().getPeso());
         
-        System.out.println(olimpiadasUno.getJuego());
-        System.out.println(olimpiadasUno.getNumeroDeJugadores());
-        System.out.println(olimpiadasUno.getInternacional());
-        
+         
     }
     
 }
