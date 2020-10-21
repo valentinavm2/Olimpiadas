@@ -3,10 +3,7 @@ package olimpiadas;
 import java.util.Date;
 
 
-//Este es un comentario 
-//buenas noches
-//hola
-//valentina Valencia
+
 
 
 public class Olimpiadas {
@@ -122,3 +119,4 @@ public class Olimpiadas {
     }
     
 }
+ 
